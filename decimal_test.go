@@ -2588,7 +2588,7 @@ func TestSum(t *testing.T) {
 		i++
 	}
 
-	sum := Sum(vals[0], vals[1:]...)
+	sum := Sum(vals...)
 	if !sum.Equal(New(45, 0)) {
 		t.Errorf("Failed to calculate sum, expected %s got %s", New(45, 0), sum)
 	}
@@ -2603,7 +2603,7 @@ func TestAvg(t *testing.T) {
 		i++
 	}
 
-	avg := Avg(vals[0], vals[1:]...)
+	avg := Avg(vals...)
 	if !avg.Equal(NewFromFloat(4.5)) {
 		t.Errorf("Failed to calculate average, expected %s got %s", NewFromFloat(4.5).String(), avg.String())
 	}
